@@ -1,0 +1,78 @@
+#record {
+    overflow-y: auto;
+    width: 70%;
+}
+
+#record-contents {
+    display: none;
+}
+
+#record.has-content #record-contents-empty {
+    display: none;
+}
+
+#record.has-content #record-contents {
+    display: block;
+}
+
+#controls {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    max-width: 320px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+#controls .badge {
+    margin-right: 10px;
+}
+
+#drag-drop-overlay {
+    cursor: pointer;
+    position: relative;
+    margin: 1em;
+    padding-top: 6em;
+    border: 4px dashed #aaa;
+    display: grid;
+    height: calc(100% - 2em);
+    text-align: center;
+    align-items: center;
+}
+
+#drag-drop-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(json-file-icon.svg);
+    opacity: .3;
+    background-size: 4em;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#drag-drop-overlay input[type="file"] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+#record.has-content #drag-drop-overlay {
+    display: none;
+}
+
+.chat-bubble {
+    cursor: pointer;
+}
+
+#viewer #record {
+    width: 100%;
+}

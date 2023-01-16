@@ -1,0 +1,23 @@
+<html data-theme="emerald">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%22100%22>🤐</text><text x=%22.3em%22 y=%221.1em%22 font-size=%2250%22>👀</text></svg>">
+    <title>SerialSpy Recording Viewer</title>
+    <link rel="stylesheet" href="build.css" />
+    <link rel="stylesheet" href="extra.css" />
+    <script src="constants.js"></script>
+    <script src="viewer.bin.js"></script>
+    <script src="viewer.js"></script>
+</head>
+
+<body id="viewer">
+    <div id="record">
+        <div id="record-contents" class="text-sm m-2"></div>
+        <div id="drag-drop-overlay" class="border-2 border-dashed">Drop your recording JSON file here<input type="file"
+                onchange="loadFile(event)"></div>
+    </div>
+</body>
+
+</html>
